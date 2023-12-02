@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "i-dev": "npm install && next dev",
     "dev": "next dev",
     "build": "next build",
     "preview": "next build && next start -p $((3001 + RANDOM % 1000))",
@@ -13,7 +14,18 @@
     "@next/bundle-analyzer": "^14.0.3",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "bright": "0.8.4",
+    "clsx": "1.2.1",
+    "date-fns": "2.30.0",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "framer-motion": "10.14",
+    "gray-matter": "4.0.3",
+    "js-cookie": "3.0.5",
+    "new-component": "5.0.2",
+    "next-mdx-remote": "4.4.1",
+    "react-feather": "2.0.10"
   },
   "devDependencies": {
     "eslint": "^8",

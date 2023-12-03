@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 // const inter = Inter({ subsets: ["latin"] });
 import { comfortaa, space_mono } from "$/fonts/fonts";
 import clsx from "clsx";
+import LinkAnimated from "@/components/LinkAnimated";
 
 export const metadata = {
   title: "Brain.exe",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={clsx(space_mono.variable, comfortaa.variable)}>
       <body>
         <Header />
+        <LinkAnimated/>
         {children}
         <Footer />
       </body>

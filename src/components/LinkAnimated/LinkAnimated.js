@@ -32,7 +32,7 @@ function LinkAnimated() {
             whileTap="tap"
             whileHover="hover"
             initial="init"
-            style={{backgroundColor: 'red'}}
+            style={{backgroundColor: 'var(--c-red)'}}
             // animate="init"
             >
             Go TO SITE

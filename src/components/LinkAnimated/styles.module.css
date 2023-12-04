@@ -2,6 +2,7 @@
 .link
 {
     position: relative;
+    
     /* background-color: green; */
 }
 .arrow
@@ -11,6 +12,9 @@
     right: 0;
     width: 7px;
     aspect-ratio: 10/15;
+    opacity: 0.7;
+    /* height: 10px; */
+    transform:translateX(50%) translateY(-90%) rotate(45deg);
     transform-origin: center bottom;
 }
 

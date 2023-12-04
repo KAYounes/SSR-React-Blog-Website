@@ -3,29 +3,31 @@
 {
     position: relative;
     
-    /* background-color: green; */
+    background-color: green;
 }
 .arrow
 {
     position: absolute;
+    background-color: rgba(78, 109, 180, 0.84);
     top: 0;
     right: 0;
     width: 7px;
     aspect-ratio: 10/15;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     /* height: 10px; */
-    transform:translateX(50%) translateY(-90%) rotate(45deg);
+    /* transform:translateX(50%) translateY(-90%) rotate(45deg); */
+    transform:translate(calc(50% - 2.41px*1.5), calc(-100% + 2.41px*1.5)) rotate(45deg);
     transform-origin: center bottom;
 }
 
 .arrow > .arrowTail
 {
-    /* stroke: var(--c-off-black); */
+    stroke: var(--c-off-black);
 }
 
 .arrow > .arrowHead
 {
-    /* fill: var(--c-off-black) */
+    fill: var(--c-off-black)
 }
 
 /* .arrow.animate

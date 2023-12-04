@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { space_mono } from "$/fonts/fonts";
 
 const variants = {
-  tap: { opacity: 1, x: "75%", y: "-95%" },
+//   tap: { opacity: 1, x: "75%", y: "-95%" },
 //   hover: { opacity: 1, x: "65%", y: "-85%",  }, //filter: 'saturate(100) hue-rotate(74deg) brightness(1.2)'
 //   init: { opacity: 1, x: "30%", y: "-50%", rotate: "45deg", filter: 'unset'  },
 }

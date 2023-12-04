@@ -10,6 +10,6 @@
 
 .logo:hover
 {
-    color: #FF0080;
+    color: var(--c-pink-accent);
     transition: color 300ms ease;
 }

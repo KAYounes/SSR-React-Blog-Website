@@ -1,23 +1,25 @@
 /* Styles Module */
 .link {
-}
-
-.link__text {
-  position: relative;
+  /* position: relative;s */
   text-decoration: wavy;
   text-decoration-line: underline;
   text-decoration-color: var(--c-off-black);
   text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.05em;
 
-  background-color: green;
+  /* background-color: green; */
+}
+
+.link__text {
 }
 
 .link:visited {
   color: var(--c-off-black);
 }
 .arrow {
+  display: inline;
   position: absolute;
-  background-color: rgba(78, 109, 180, 0.84);
+  /* background-color: rgba(78, 109, 180, 0.84); */
   top: 0;
   right: 0;
   /* width: 7px; */
@@ -25,17 +27,17 @@
   /* opacity: 0.7; */
   /* height: 10px; */
   /* transform:translateX(50%) translateY(-90%) rotate(45deg); */
-  transform: translate(calc(50% - 2.41px * 2), calc(-100% + 2.41px * 2)) rotate(45deg);
+  transform: translate(calc(50% - 2.41px * 2.6), calc(-100% + 2.41px * 2.6)) rotate(45deg);
   transform-origin: center bottom;
   overflow: visible;
 }
 
 .arrow > .arrowTail {
-  fill: var(--c-off-black);
+  fill: var(--c-pink-accent);
 }
 
 .arrow > .arrowHead {
-  fill: var(--c-off-black);
+  fill: var(--c-pink-accent);
 }
 
 /* .arrow.animate

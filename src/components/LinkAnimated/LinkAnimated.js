@@ -23,19 +23,30 @@ const variantsArrowTail = {
 };
 
 function LinkAnimated() {
+  const MotionLink = motion(Link);
   return (
-    <Link
+    <MotionLink
       href={'/'}
+      whileTap='tap'
+      whileHover='hover'
+      initial='init'
       className={clsx(styles.link, space_mono.className)}
     >
-      <motion.span
+      <span
         className={clsx(styles.link__text)}
-        whileTap='tap'
-        whileHover='hover'
-        initial='init'
         // animate="init"
       >
         Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+      </span>
+      <span
+        style={{
+          height: '100%',
+          backgroundColor: '',
+          position: 'relative',
+          padding: '0 2px',
+          //   display: 'inline-flex',
+        }}
+      >
         <motion.svg
           variants={variants}
           className={styles.arrow}
@@ -68,38 +79,8 @@ function LinkAnimated() {
             // fill='black'
           />
         </motion.svg>
-        {/* <motion.svg
-                className={styles.arrow}
-                xmlns='http://www.w3.org/2000/svg'
-                variants={variants}
-                viewBox='0 0 10 15'
-                fill='none'
-                >
-                <motion.path
-                    d='M5 13L5 7'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    className={styles.arrowTail}
-                    // animate={{pathLength: 1}}
-                    variants={{
-                      hover: { pathLength: 1},
-                      init: { pathLength: 0},
-                    }}
-                />
-                <motion.path
-                    d='M4.58397 1.62404C4.78189 1.32717 5.21811 1.32717 5.41602 1.62404L8.48177 6.22265C8.70329 6.55493 8.46509 7 8.06574 7H5H1.93426C1.53491 7 1.29672 6.55493 1.51823 6.22265L4.58397 1.62404Z'
-                    className={styles.arrowHead}
-                    variants={{
-                      hover: {y: 0},
-                      init: {y: '7px'},
-                    }}
-                />
-            </motion.svg> */}
-      </motion.span>
-
-      <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</span>
-      <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</span>
-    </Link>
+      </span>
+    </MotionLink>
   );
 }
 /*

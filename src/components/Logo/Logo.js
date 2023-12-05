@@ -5,10 +5,16 @@ import Link from "next/link";
 
 import { LOGO } from "@/utils/constants";
 import clsx from "clsx";
-import { space_mono } from "$/fonts/fonts";
+import { space_mono } from "@/app/fonts";
 
 function Logo() {
-  return <Link href='/' className={clsx(styles.logo)}>{LOGO}</Link>;
+    return (
+        <Link
+            href='/'
+            className={clsx(styles.logo)}>
+            {LOGO}
+        </Link>
+    );
 }
 
 export default Logo;

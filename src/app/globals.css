@@ -13,21 +13,12 @@
 }
 
 html {
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
 }
 
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-image: linear-gradient(
-  0deg,
-  hsl(270deg 100% 76%) 0%,
-  hsl(353deg 100% 83%) 27%,
-  hsl(34deg 100% 82%) 56%,
-  hsl(63deg 97% 81%) 100%
-);
-background-repeat: no-repeat;
-min-height: 100vh;
 }
 
 img,
@@ -54,4 +45,91 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+/* Global Styles */
+html {
+    min-height: 100vh;
+    font-family: var(--ff-sansSerif);
+    font-size: calc(10px + 0.5vw);
+    color: var(--c-off-black);
+
+    --s1: 0.1em;
+    --s2: 0.4em;
+    --s3: 0.8em;
+    --s4: 1.2em;
+    --s5: 1.8em;
+    --s6: 2.5em;
+}
+
+body {
+    background-image: linear-gradient(
+        325deg,
+        hsl(261deg 100% 70%) 0%,
+        hsl(267deg 99% 72%) 26%,
+        hsl(273deg 99% 74%) 45%,
+        hsl(278deg 99% 75%) 58%,
+        hsl(284deg 99% 78%) 66%,
+        hsl(291deg 93% 79%) 71%,
+        hsl(301deg 81% 81%) 76%,
+        hsl(310deg 92% 85%) 82%,
+        hsl(317deg 99% 88%) 90%,
+        hsl(324deg 100% 91%) 100%
+    );
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+#root {
+    --column-width: 70ch;
+    --column-padding: 1em;
+    --page-padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr min(70ch, calc(100% - var(--page-padding) * 2)) 1fr;
+    position: relative;
+    column-gap: var(--page-padding);
+}
+
+.column {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.column:nth-of-type(1) {
+    background-color: hsl(34, 78%, 81%);
+    grid-column: 1/2;
+}
+.column:nth-of-type(2) {
+    background-color: hsl(96, 78%, 81%);
+    grid-column: 2/3;
+}
+.column:nth-of-type(3) {
+    background-color: hsl(204, 78%, 81%);
+    grid-column: 3/4;
 }

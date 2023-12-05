@@ -1,0 +1,5 @@
+/* Styles Module */
+.container {
+    width: 100%;
+    grid-column: 2/3;
+}

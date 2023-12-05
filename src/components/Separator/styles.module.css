@@ -1,0 +1,8 @@
+/* Styles Module */
+.separator {
+    display: block;
+}
+
+.horizontal {
+    display: inline;
+}

@@ -1,1 +1,23 @@
 /* Styles Module */
+.blog__abstract {
+    opacity: 0.9;
+    margin-bottom: var(--s4);
+}
+
+.blog__publishedDate {
+    font-style: italic;
+    font-weight: 300;
+    text-align: end;
+}
+
+.blog-card--footer {
+    font-size: var(--fs-small);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.blog-card--footer > kbd:hover {
+    color: rgb(var(--c-pink));
+}

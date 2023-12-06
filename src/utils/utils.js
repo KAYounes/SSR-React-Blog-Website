@@ -9,11 +9,12 @@ function isInt(query, acceptString = false) {
 }
 
 function isInRange(query, min, max) {
-    if (!Number(query)) throw Error(`isInRange expects query to be a number. Got '${query}'`);
-    if (max <= min) throw Error(`isInRange expects max > min. Got min: '${min}', max: '${max}'`);
+    if (Number(query) === NaN)
+        throw Error(`isInRange expects query to be a number. Got '${query}'`);
+    if (max < min) throw Error(`isInRange expects max > min. Got min: '${min}', max: '${max}'`);
 
     if (query < min) return false;
-    if (query > max) return false
+    if (query > max) return false;
 
-    return true
+    return true;
 }

@@ -1,0 +1,77 @@
+/* Styles Module */
+
+.card-grid {
+    display: grid;
+}
+
+.card-grid__c1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.card-grid__c2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid__c3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid__c4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid__c5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card-grid__c6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.card-grid__c7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.card-grid__c8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.card-grid__c9 {
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.card-grid__c10 {
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.card-grid__c11 {
+    grid-template-columns: repeat(11, 1fr);
+}
+
+.card-grid__c12 {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.card-grid__g1 {
+    gap: 0.2em;
+}
+
+.card-grid__g2 {
+    gap: 0.8em;
+}
+
+.card-grid__g3 {
+    gap: 1.6em;
+}
+
+.card-grid__g4 {
+    gap: 2.5em;
+}
+
+.card-grid__g5 {
+    gap: 4em;
+}
+
+.card-grid__g6 {
+    gap: 6em;
+}

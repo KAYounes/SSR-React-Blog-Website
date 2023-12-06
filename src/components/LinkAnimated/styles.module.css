@@ -2,19 +2,18 @@
 .link {
     text-decoration: wavy;
     text-decoration-line: underline;
-    text-decoration-color: var(--c-off-black);
+    text-decoration-color: rgb(var(--c-text));
     text-decoration-skip-ink: all;
     text-decoration-thickness: 0.05em;
 }
 
-.link__text
-{
+.link__text {
     font-family: var(--ff-mono);
     font-size: 0.9em;
 }
 
 .link:visited {
-    color: var(--c-off-black);
+    color: rgb(var(--c-off-black));
 }
 
 .link__after {
@@ -32,12 +31,4 @@
     transform: rotate(45deg) translate(-20%, 5%);
     /* transform-origin: top center; */
     overflow: visible;
-}
-
-.arrow > .arrowTail {
-    fill: var(--c-pink-accent);
-}
-
-.arrow > .arrowHead {
-    fill: var(--c-pink-accent);
 }

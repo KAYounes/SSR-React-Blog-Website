@@ -23,9 +23,9 @@ export default function RootLayout({ children }) {
             className={clsx(space_mono.variable, be_vietname_pro.variable, josefin_slab.variable)}>
             <body>
                 <div id='root'>
+                    {/* <div className='column'></div>
                     <div className='column'></div>
-                    <div className='column'></div>
-                    <div className='column'></div>
+                    <div className='column'></div> */}
                     <Header />
                     <BlockSeparator preset={5} />
                     {children}

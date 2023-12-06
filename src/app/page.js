@@ -11,7 +11,12 @@ export default async function Home() {
     const blogs = await getBlogs("desc");
 
     const blogPreviewCardsDOM = blogs.map(function (blog) {
-        return <BlogPreviewCard blog={blog} />;
+        return (
+            <BlogPreviewCard
+                blog={blog}
+                key={blog.slug}
+            />
+        );
     });
 
     return (

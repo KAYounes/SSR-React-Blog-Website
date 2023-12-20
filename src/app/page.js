@@ -21,7 +21,7 @@ export default async function Home() {
 
     return (
         <Container>
-            <h1 className={clsx(styles.page__header)}>All Blogs</h1>
+            <h1 className={clsx(styles.header)}>All Blogs</h1>
             <CardGrid
                 columns={1}
                 gap={3}>

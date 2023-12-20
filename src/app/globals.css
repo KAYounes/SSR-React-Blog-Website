@@ -80,6 +80,10 @@ html {
         16.5px 16.4px 34.9px hsl(var(--shadow-color) / 0.4),
         24.2px 24px 51.1px hsl(var(--shadow-color) / 0.5),
         35.3px 35px 74.6px hsl(var(--shadow-color) / 0.6);
+
+    --column-width: 70ch;
+    --page-padding: 10px;
+    --root-grid-columns: 1fr min(var(--column-width), calc(100% - var(--page-padding) * 2)) 1fr;
 }
 
 body {
@@ -130,14 +134,13 @@ h6 {
 }
 
 #root {
-    --column-padding: 1em;
-    --column-width: 70ch;
-    --page-padding: 10px;
-
-    grid-template-columns: 1fr min(70ch, calc(100% - var(--page-padding) * 2)) 1fr;
     display: grid;
     position: relative;
+    grid-template-columns: var(--root-grid-columns);
     column-gap: var(--page-padding);
+
+    margin-top: 5vh;
+    margin-bottom: 10vh;
 }
 
 .column {

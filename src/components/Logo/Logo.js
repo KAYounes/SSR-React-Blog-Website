@@ -12,7 +12,7 @@ function Logo() {
         <Link
             href='/'
             className={clsx(styles.logo)}>
-            {LOGO}
+            <h4>{LOGO}</h4>
         </Link>
     );
 }

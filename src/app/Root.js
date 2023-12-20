@@ -8,6 +8,7 @@ const Root = styled.html`
 `;
 
 export default Root;
+
 // return (
 //       <Root lang="en" className={clsx(space_mono.variable, comfortaa.variable)}>
 //         {children}

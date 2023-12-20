@@ -2,16 +2,13 @@ import React from "react";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 
-function Container({ className, tag, children, ...otherProps }) {
-    let Root = "div";
-    if (tag) Root = tag;
-
+function Container({ className, tag: Tag = "div", children, ...otherProps }) {
     return (
-        <Root
+        <Tag
             className={clsx(styles.container, className)}
             {...otherProps}>
             {children}
-        </Root>
+        </Tag>
     );
 }
 

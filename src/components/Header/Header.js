@@ -7,11 +7,13 @@ import BleedContainer from "../BleedContainer";
 
 function Header({}) {
     return (
-        <Container
+        <header
             className={clsx(styles.header)}
             tag={"header"}>
-            <Logo />
-        </Container>
+            <Container>
+                <Logo />
+            </Container>
+        </header>
     );
 }
 

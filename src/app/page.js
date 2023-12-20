@@ -27,24 +27,6 @@ export default async function Home() {
                 gap={3}>
                 {blogPreviewCardsDOM}
             </CardGrid>
-            {/* {(await blogs).map(function (blog) {
-                return (
-                    <div key={blog.slug}>
-                        <div>{blog.slug}</div>
-                        <div>{blog.content}</div>
-                        {Object.keys(blog.metadata).map(function (key) {
-                            return (
-                                <div key={key}>
-                                    <div>
-                                        <span>{key}: </span>
-                                        <span>{blog.metadata[key]}</span>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                );
-            })} */}
         </Container>
     );
 }

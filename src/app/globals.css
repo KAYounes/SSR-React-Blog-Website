@@ -79,6 +79,26 @@ html {
     -16px 17.5px 21.3px -2.9px hsl(var(--shadow-color) / 0.31),
     -25.9px 28.4px 34.6px -3.4px hsl(var(--shadow-color) / 0.25),
     -39.8px 43.6px 53.1px -4px hsl(var(--shadow-color) / 0.2);
+
+  /* --shadow-color: 269deg 65% 46%;
+    --shadow-elevation-low: 0.4px 0.4px 0.8px hsl(var(--shadow-color) / 0),
+        0.7px 0.7px 1.5px hsl(var(--shadow-color) / 0.21),
+        1.5px 1.5px 3.2px hsl(var(--shadow-color) / 0.42);
+    --shadow-elevation-medium: 0.4px 0.4px 0.8px hsl(var(--shadow-color) / 0),
+        1.8px 1.8px 3.8px hsl(var(--shadow-color) / 0.17),
+        3.6px 3.6px 7.6px hsl(var(--shadow-color) / 0.33),
+        7.4px 7.3px 15.6px hsl(var(--shadow-color) / 0.5);
+    --shadow-elevation-high: 0.4px 0.4px 0.8px hsl(var(--shadow-color) / 0),
+        4.2px 4.2px 8.9px hsl(var(--shadow-color) / 0.1),
+        7.5px 7.4px 15.8px hsl(var(--shadow-color) / 0.2),
+        11.3px 11.2px 23.9px hsl(var(--shadow-color) / 0.3),
+        16.5px 16.4px 34.9px hsl(var(--shadow-color) / 0.4),
+        24.2px 24px 51.1px hsl(var(--shadow-color) / 0.5),
+        35.3px 35px 74.6px hsl(var(--shadow-color) / 0.6); */
+
+  --column-width: 70ch;
+  --page-padding: 10px;
+  --root-grid-columns: 1fr min(var(--column-width), calc(100% - var(--page-padding) * 2)) 1fr;
 }
 
 body {
@@ -181,10 +201,14 @@ h6 {
   --column-width: 70ch;
   --page-padding: 10px;
 
-  grid-template-columns: 1fr min(70ch, calc(100% - var(--page-padding) * 2)) 1fr;
+  /* grid-template-columns: 1fr min(70ch, calc(100% - var(--page-padding) * 2)) 1fr; */
   display: grid;
   position: relative;
   column-gap: var(--page-padding);
+  grid-template-columns: var(--root-grid-columns);
+
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
 .column {

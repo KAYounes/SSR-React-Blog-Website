@@ -5,12 +5,12 @@ import matter from "gray-matter";
 const DATABASE_DIR = "content/";
 
 export async function getBlog(blogSlug) {
-    const listOfBlogs = getListOfBlogs();
+    const listOfBlogs = await getListOfBlogs();
 
     if (!listOfBlogs.includes(blogSlug)) return null;
     const fileName = blogSlug + ".mdx";
     const blog = await _getBlog(fileName);
-    return [blog];
+    return blog;
 }
 
 export async function getBlogs(sort) {

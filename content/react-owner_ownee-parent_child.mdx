@@ -1,8 +1,9 @@
 ---
-title: 'React Component Ownership'
+title: "React Component Ownership"
 abstract: A child component will not re-render when its parent re-render; however, an owned component will re-render when its owner component re-renders.
-published: '2023-December-2'
+published: 2023-12-02
 ---
+
 **Wait? Parent and owner? It's the same thing!**
 
 Let us start by differentiating between them.
@@ -27,10 +28,9 @@ function App()
 
 Here, we say that the <component>Parent</component> is the parent of <component>Child</component> component.
 
-
 ## Owner-Ownee Relationship
 
-The owner-ownee relationship is formed by rendering the owned component inside the owner component. 
+The owner-ownee relationship is formed by rendering the owned component inside the owner component.
 
 ```JavaScript
 function Owner({children})

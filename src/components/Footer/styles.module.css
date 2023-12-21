@@ -1,0 +1,4 @@
+.footer {
+    display: grid;
+    grid-template-columns: var(--root-grid-columns);
+}

@@ -38,13 +38,6 @@ export async function getBlogs(sort) {
     }
 
     return blogs;
-
-    // for (let file of blogs) {
-    //     console.log(
-    //         `File Name: ${file.slug}\nContent: ${file.fileContent}\nMeta Data: ${file.metaData}`,
-    //     );
-    //     console.log("\n=======================================");
-    // }
 }
 
 async function getListOfBlogs() {

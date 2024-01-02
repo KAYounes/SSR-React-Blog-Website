@@ -10,11 +10,12 @@ import CardGrid from "@/components/CardGrid";
 export default async function Home() {
     const blogs = await getBlogs("desc");
 
-    const blogPreviewCardsDOM = blogs.map(function (blog) {
+    const blogPreviewCardsDOM = blogs.map(function (blog, index) {
         return (
             <BlogPreviewCard
                 blog={blog}
                 key={blog.slug}
+                active={index === 3}
             />
         );
     });

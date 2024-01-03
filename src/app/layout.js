@@ -10,6 +10,7 @@ import Root from "./Root";
 import Separator from "@/components/Separator";
 import Container from "@/components/Container";
 import BlockSeparator from "@/components/BlockSeparator";
+import ScrollDistanceProvider from "@/components/ScrollDistanceProvider";
 
 export const metadata = {
     title: "Brain.exe",
@@ -22,12 +23,14 @@ export default function Layout({ children }) {
             lang='en'
             className={clsx(space_mono.variable, be_vietname_pro.variable, josefin_slab.variable)}>
             <body>
-                <Header />
-                <main id='root'>
-                    {/* <BlockSeparator preset={5} /> */}
-                    {children}
-                </main>
-                <Footer />
+                <ScrollDistanceProvider>
+                    <Header />
+                    <main id='root'>
+                        {/* <BlockSeparator preset={5} /> */}
+                        {children}
+                    </main>
+                    <Footer />
+                </ScrollDistanceProvider>
             </body>
         </Root>
     );

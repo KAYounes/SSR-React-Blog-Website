@@ -8,29 +8,29 @@ import { enUS } from "date-fns/locale";
 import { ArrowRight } from "react-feather";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ScrollDistanceContext } from "../ScrollDistanceProvider";
 
 function BlogPreviewCard({ blog, active }) {
     const { slug, content, metadata } = blog;
     const { title, abstract, published } = metadata;
     const publishedDate = new Date(published);
-
-    const MotionCard = motion(Card);
+    const { setScroll } = React.useContext(ScrollDistanceContext);
 
     return (
-        <MotionCard
-            layoutScroll
-            transition={{ type: "spring", stiffness: 700, damping: 30 }}
-            elevation={"elevation__medium"}
-            animate={{
-                top: active ? 0 : "unset",
-            }}>
+        <Card
+            layoutId={slug}
+            key={slug}
+            layout
+            style={{ overflow: "hidden", transformOrigin: "50% 0" }}
+            transition={{ type: "spring", stiffness: 190, damping: 22, mass: 1, restDelta: 0.3 }}
+            elevation={"elevation__medium"}>
             <h6>
                 {title} | ({active ? "- a" : "- x"})
             </h6>
             <div className={clsx(styles["blog__abstract"])}>{abstract}</div>
             <div className={clsx(styles["blog-card--footer"])}>
                 <Link href={`./blogs/${slug}`}>
-                    <kbd>
+                    <kbd onClick={setScroll}>
                         Continue Reading <ArrowRight />
                     </kbd>
                 </Link>
@@ -39,7 +39,7 @@ function BlogPreviewCard({ blog, active }) {
                     {formatDistanceToNow(publishedDate)} ago)
                 </div>
             </div>
-        </MotionCard>
+        </Card>
     );
 }
 
